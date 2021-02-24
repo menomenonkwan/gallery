@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Contact - Brannon Lee</title>
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <!-- <link rel="stylesheet" href="styles/main.scss"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="wrapper">
+        <nav>
+          <div class="burger">
+            <div class="burger-middle"></div>
+          </div>
+          <h3>Brannon Lee</h3>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="#" class="active">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
+            <li><a href="#"><i class="fab fa-artstation"></i></a></li>
+          </ul>
+        </div>
+        <footer>
+        </footer>
+      </div>
+    </div>
+
+    <section>
+      <div class="bckgrnd"></div>    
+        <div class="mail">
+          <form id="comment-form" name="contact">
+            <label for="name">Name*:</label>
+            <input type="text" id="name" name="name" placeholder="name...">
+            <label for="email">Email*:</label>
+            <input type="email" id="email" name="email" placeholder="email...">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="subject... (optional)">
+            <label for="message">Message:</label>
+            <textarea type="message" id="message" name="message" rows="4" placeholder="message... (optional)"></textarea>
+            <label class="checkmark" for="agree">
+              <input type="checkbox" id="agree" name="agree" checked="">
+              Sign me up for the mailing list!
+            </label>
+            <hr>
+            <button type="submit">Submit</button>
+          </form>
+        </div>       
+    </section>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+  <script src="scripts/contact.js"></script>
+  <script src="scripts/mobile.js"></script>
+</body>
+</html>

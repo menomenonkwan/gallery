@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Marmelad&family=Philosopher&family=Reem+Kufi&family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #131313;
+  color: #ffe4e1;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.anime-grid {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[11];
+      grid-template-columns: repeat(11, 1fr);
+  -ms-grid-rows: (1fr)[auto-fit];
+      grid-template-rows: repeat(auto-fit, 1fr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  grid-auto-flow: dense;
+  background: rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+}
+
+.anime-grid .anime-grid-item {
+  background: #131313;
+}
+
+.splash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  /* background: #b38072; */
+}
+
+@media (max-width: 700px) {
+  .splash {
+  background: none;
+  }
+}
+
+.splash nav {
+  opacity: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+header h2 {
+  font-size: 3rem;
+  color: #bbbc71;
+  opacity: 0;
+}
+
+header img {
+  width: 150px;
+  height: 200px;
+  border-radius: 50%;
+  font-size: 0px;
+  margin: 1rem 0;
+  opacity: 0;
+  -webkit-transition: opacity 1.2s ease;
+  transition: opacity 1.2s ease;
+}
+
+header p {
+  max-width: 600px;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  opacity: 0;
+}
+
+header p a {
+  text-decoration: none;
+  color: #bbbc71;
+}
+/*# sourceMappingURL=home.css.map */

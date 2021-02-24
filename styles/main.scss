@@ -1,0 +1,89 @@
+@import "config";
+@import "menu";
+@import "home";
+@import "contact";
+@import "about";
+@import "gallery";
+@import "store";
+
+.container {
+  width: 100vw;
+  background: $mainBlack;
+  display: flex;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+
+footer {
+  width: 100%;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 15px 0;
+  font-family: $secondaryFont, sans-serif;
+  .return {
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: #bbbc71;
+    font-size: 1rem;
+    &:hover {
+      color: #131313;
+      background: #bbbc71;
+    }
+  }
+}
+
+.sidebar {
+  footer {
+    margin-top: auto;
+    @media (max-width: 700px) {
+      display: none;
+      margin-top: 15%;
+    }
+  }
+  .wrapper {
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    @media (max-width: 700px) {
+      padding: 0;
+      min-height: auto;
+      margin-bottom: 2rem;
+    }
+  }
+  .social {
+    position: relative;
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+section {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100%;
+  background: url("https://picsum.photos/id/319/400");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.column {
+    flex-direction: column;
+  }
+  @media (max-width: 700px) {
+    padding: 2rem 0;
+  }
+}

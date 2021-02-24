@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Gallery - Brannon Lee</title>
+  <link rel="preload" href="scripts/images.js" as="script">
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="wrapper">
+        <nav>
+          <div class="burger">
+            <div class="burger-middle"></div>
+          </div>
+          <h3>Brannon Lee</h3>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#" class="active">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
+            <li><a href="#"><i class="fab fa-artstation"></i></a></li>
+          </ul>
+        </div>
+        <footer>
+          <p>Copyright &copy; 2020 Brannon Lee</p>
+        </footer>
+      </div>
+    </div>
+
+    <div class="overlay">
+      <div class="overlay-inner">
+        <button class="close"><i class="fas fa-times"></i></button>
+        <div class="showcase"></div>
+        <div class="description">
+          <p>Image Description: <span></span></p>
+          <p>11x8 print - <span class="price"></span></p>
+          <button class="add">Add To Cart</button>
+          <a href="store.html">View Cart</a>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="switch prev" value="left"><i class="fas fa-arrow-left"></i></div>
+        <div class="switch next" value="right"><i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+
+    <section style="background: #131313">
+      <div class="gallery-grid"></div>
+    </section>  
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/locales/en_US/faker.en_US.min.js"></script>
+  <script src="scripts/images.js"></script>
+  <script src="scripts/mobile.js"></script>
+</body>
+</html>

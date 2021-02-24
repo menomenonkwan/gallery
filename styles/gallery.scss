@@ -1,0 +1,197 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-auto-rows: minmax(200px, 300px);
+  gap: 5px;
+  grid-auto-flow: dense;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  @media (max-width: 700px) {
+    grid-auto-rows: minmax(100px, 125px);
+    background: $mainBlack;
+    width: 80%;
+    margin: auto;
+    gap: 2rem;
+  }
+  .gallery-item {
+    overflow: hidden;
+    display: grid;
+    img {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .item-overlay {
+      background: #b3807235;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      transition: 0.2s;
+      transform: translateY(-100%);
+    }
+    &:hover .item-overlay {
+      transform: translateY(0);
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1;
+  @media (max-width: 900px) {
+    background: rgba(0, 0, 0, 0.85);
+    bottom: auto;
+    min-height: 100%;
+    justify-content: flex-start;
+    overflow-y: scroll;
+  }
+  .overlay-inner {
+    opacity: 0;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 75%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 900px) {
+      background: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0 0 0;
+      min-width: 100%;
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      background: $thirdColor;
+      border-radius: 0 0 5px 0;
+      transition: 0.2s ease;
+      &:hover {
+        color: $mainWhite;
+      }
+    }
+    .showcase {
+      margin: auto 2rem auto auto;
+      @media (max-width: 900px) {
+        margin: auto;
+      }
+    }
+    img {
+      border: 2px solid $fourthColor;
+      border-radius: 3px;
+      width: 350px;
+      height: 350px;
+      margin: 2rem 0 2rem auto;
+      @media (max-width: 900px) {
+        max-width: 100%;
+        max-height: 200px;
+        margin: 2rem auto 0 auto;
+      }
+    }
+    button {
+      font-size: 1rem;
+      margin: 1rem 0;
+      @media (max-width: 900px) {
+        margin: auto;
+      }
+    }
+    a {
+      font-size: 1rem;
+      background: $secondColor;
+      text-decoration: none;
+      color: $mainBlack;
+      border-radius: 5px;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      &:hover {
+        background: $thirdColor;
+      }
+      @media (max-width: 900px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        border-radius: 0 0 0 5px;
+        background: #b38072;
+      }
+    }
+    .description {
+      margin: 2rem;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @media (max-width: 900px) {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      span {
+        font-family: $thirdFont, "sans-serif";
+        font-size: 0.9rem;
+      }
+      @media (max-width: 700px) {
+        .price {
+          font-size: 1.5rem;
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    background: $fourthColor;
+    width: 75%;
+    font-size: 2rem;
+    @media (max-width: 700px) {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      font-size: 1.2rem;
+    }
+    .switch {
+      padding: 1rem 2rem;
+      width: 100%;
+      height: 100%;
+      transition: all 0.25s ease;
+      &:hover {
+        background: $fifthColor;
+        cursor: pointer;
+      }
+    }
+    .next {
+      text-align: right;
+    }
+  }
+  .overlay img {
+    width: 100%;
+  }
+}
+
+.purchased {
+  color: $secondColor;
+  background-color: $fifthColor;
+  pointer-events: none;
+}

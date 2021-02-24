@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example Store - Brannon Lee</title>
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="wrapper">
+        <nav>
+          <div class="burger">
+            <div class="burger-middle"></div>
+          </div>
+          <h3>Brannon Lee</h3>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#" class="active">Store</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
+            <li><a href="#"><i class="fab fa-artstation"></i></a></li>
+          </ul>
+        </div>
+        <footer>
+          <p>Copyright &copy; 2020 Brannon Lee</p>
+        </footer>
+      </div>
+    </div>
+
+    <section class="store">
+      <div class="bckgrnd"></div>   
+      <!-- cart -->
+      <div id="cart"></div>
+
+      <!-- receipt -->
+      <div id="receipt">       
+        <p>You have <span class="total-items"></span> items in your cart</p>
+        <h3 class="total">TOTAL: $<span></span></h3>
+        <div class="buttons">
+          <button class="buy"  type="button" disabled>Check Out <i class="fas fa-shopping-cart"></i></button>
+          <button class="empty" type="button">Empty Cart <i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+  <script src="scripts/store.js"></script> 
+  <script src="scripts/mobile.js"></script>
+</body>
+</html>

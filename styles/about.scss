@@ -1,0 +1,77 @@
+#biography {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 6rem;
+  .bio-text { 
+    letter-spacing: 0.15rem;
+    font-family: $thirdFont, 'sans-serif';
+    margin: 1rem;
+    padding: 0 2%;
+    color: $mainBlack;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  @media (max-width: 1000px) {
+    padding: 2rem;
+  }
+  @media (max-width: 700px) {
+    padding: 0;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+#testimonials {
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 3rem;
+  opacity: 0;
+  h3 {
+    text-align: center;
+    padding: 1rem;
+    color: #bbbc71;
+  }
+  blockquote {
+    font-family: $secondaryFont, sans-serif;
+    padding: 1rem 1rem 2rem 1rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+  }
+  figcaption {
+    text-align: center;
+    font-size: 1.3rem;
+    color: gray; 
+  }
+  figure p {
+    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+    filter: brightness(0.5);
+    font-style: italic;
+  }
+  @media (max-width: 700px) {
+    width: 90%;
+    margin: 0 auto 3rem auto;
+    padding: 0;
+  }
+}
+
+.bx-wrapper {
+  background: rgba(0,0,0,0.1);
+  padding: 2rem 3rem 1rem 3rem;
+  margin: auto;
+  border: 5px solid #b38072;
+  // max-width: 1000px;
+}
+
+.bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
+  left: 0;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+  background: #bbbc71;
+} 

@@ -1,0 +1,36 @@
+$firstColor: #ffe4e1;
+$secondColor: #bbbc71;
+$thirdColor: #b38072;
+$fourthColor: #6c7573;
+$fifthColor: #655450;
+$mainWhite: #e1e1e1;
+$mainBlack: #131313;
+
+
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Marmelad&family=Philosopher&family=Reem+Kufi&family=Varela+Round&display=swap");
+
+$mainFont: 'Julius Sans One';
+$secondaryFont: 'Philosopher';
+$thirdFont: 'Varela Round';
+// font-family: 'Marmelad', sans-serif;
+// font-family: 'Reem Kufi', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $mainBlack;
+  color: $firstColor;
+  font-family: $mainFont, sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
